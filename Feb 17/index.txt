@@ -1,0 +1,5 @@
+var fs = require("fs");
+var path = require("path");
+
+//read files
+var filePath = path.join(__dirname, "index.txt")
