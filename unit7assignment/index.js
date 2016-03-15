@@ -43,32 +43,49 @@ mkdirIfNotExist(dir2015);
 //2016
 var dir2016 = path.resolve(processedfolder, '2016');
 mkdirIfNotExist(dir2016);
+var count = 0;
 
 //reading the directory of the raw folder
 function readdirfun(err, data){
 if (err) throw err;
     var i = 0;
+
 do {
     path.parse(data[i]);
     if (data[i].charAt(3) == 4)
     {
         var yo = path.resolve(raw, data[i]);
         var sup = path.resolve(dir2014, data[i]);
-        fs.rename(yo, sup);
+        fs.rename(yo, sup, function (err) {
+            if (err) throw err;
+        });
+        count++;
+        if (count == data.length){
+            console.log(colors.green("...Finished!"))}
     }
     
     if (data[i].charAt(3) == 5)
     {
         var yo1 = path.resolve(raw, data[i]);
         var sup1 = path.resolve(dir2015, data[i]);
-        fs.rename(yo1, sup1);
+        fs.rename(yo1, sup1, function (err) {
+            if (err) throw err;
+        });
+        count++;
+        if (count == data.length){
+            console.log(colors.green("...Finished!"))}
     }
     
     if (data[i].charAt(3) == 6)
     {
         var yo2 = path.resolve(raw, data[i]);
         var sup2 = path.resolve(dir2016, data[i]);
-        fs.rename(yo2, sup2);
+        fs.rename(yo2, sup2, function (err) {
+            if (err) throw err;
+        });
+        count++;
+        if (count == data.length){
+            console.log(colors.green("...Finished!"))}
     }
     i++;
 }
