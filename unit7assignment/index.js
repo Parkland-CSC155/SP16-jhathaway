@@ -100,7 +100,6 @@ fs.readdir(dir2015, function(err, items){
 fs.readdir(dir2016, function(err, items){
     console.log(colors.blue("moved [" + items.length + "] logs into processed\\2016"));
 })
-console.log(colors.blue("...Finished!"));
 
 
 }
