@@ -58,10 +58,10 @@ do {
         var sup = path.resolve(dir2014, data[i]);
         fs.rename(yo, sup, function (err) {
             if (err) throw err;
-        });
-        count++;
-        if (count == data.length){
+            count++;
+            if (count == data.length){
             console.log(colors.green("...Finished!"))}
+        });
     }
     
     if (data[i].charAt(3) == 5)
@@ -70,10 +70,10 @@ do {
         var sup1 = path.resolve(dir2015, data[i]);
         fs.rename(yo1, sup1, function (err) {
             if (err) throw err;
-        });
-        count++;
-        if (count == data.length){
+            count++;
+            if (count == data.length){
             console.log(colors.green("...Finished!"))}
+        });
     }
     
     if (data[i].charAt(3) == 6)
@@ -82,10 +82,10 @@ do {
         var sup2 = path.resolve(dir2016, data[i]);
         fs.rename(yo2, sup2, function (err) {
             if (err) throw err;
-        });
-        count++;
-        if (count == data.length){
+            count++;
+            if (count == data.length){
             console.log(colors.green("...Finished!"))}
+        });
     }
     i++;
 }
@@ -112,3 +112,4 @@ var content = fs.readdir(raw, readdirfun);
 //sorting
 console.log(colors.green("sorting files"));
 //content.sort();
+//the right unit 7
