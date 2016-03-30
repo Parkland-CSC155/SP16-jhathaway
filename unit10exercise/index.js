@@ -23,6 +23,7 @@ request("https://www.quandl.com/api/v3/datasets/GOOG/NASDAQ_GOOG.json", function
     if(!error && response.statusCode == 200) {
         var parsedJson = JSON.parse(body);
         console.log("");
+        console.log(parsedJson.dataset.name);
         console.log(parsedJson.dataset.description);
     }
     count++;
@@ -36,6 +37,7 @@ request("https://www.quandl.com/api/v3/datasets/GOOG/NASDAQ_MSFT.json", function
     if(!error1 && response1.statusCode == 200) {
         var parsedJson1 = JSON.parse(body1);
         console.log("");
+        console.log(parsedJson1.dataset.name);
         console.log(parsedJson1.dataset.description);
     }
     count++;
@@ -49,6 +51,7 @@ request("https://www.quandl.com/api/v3/datasets/GOOG/NASDAQ_AAPL.json", function
     if(!error2 && response2.statusCode == 200) {
         var parsedJson2 = JSON.parse(body2);
         console.log("");
+        console.log(parsedJson2.dataset.name);
         console.log(parsedJson2.dataset.description);
     }
     count++;
