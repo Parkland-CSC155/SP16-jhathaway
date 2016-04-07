@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 //Port
-var PORT = 3000
+var PORT = process.env.port || 3000;
 
 function handleRequest(request, response){   
 
