@@ -1,0 +1,8 @@
+<article class="episodes">
+	<h1>Breaking Bad Episodes</h1>
+	<ul class="group">
+		<% appdata._embedded.episodes.forEach(function(item){ %>
+			<li><a href="<%= item.url %>"><%= item.name %>"</a></li>
+		<% }); %>
+	</ul>
+</article>

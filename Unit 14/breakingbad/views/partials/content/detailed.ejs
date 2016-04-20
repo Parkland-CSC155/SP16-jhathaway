@@ -1,0 +1,13 @@
+<article class="episodes">
+	<h1>Breaking Bad Episodes</h1>
+	<ul class="group">
+		<% appdata._embedded.episodes.forEach(function(item){ %>
+			
+			<dl>
+				<dt>"<%= item.name %>"</dt>
+				<dd><%= item.summary %></dd>
+			<dl>			
+			
+		<% }); %>
+	</ul>
+</article>
